@@ -685,9 +685,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# My Services
+# My Poetries
 --------------------------------------------------------------*/
-.services .icon-box {
+.poetries .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -698,7 +698,7 @@ section {
   border: 1px solid #fff;
 }
 
-.services .icon {
+.poetries .icon {
   margin: 0 auto 20px auto;
   padding-top: 17px;
   display: inline-block;
@@ -709,34 +709,34 @@ section {
   background: #fff4df;
 }
 
-.services .icon i {
+.poetries .icon i {
   font-size: 36px;
   line-height: 1;
   color: #ffb727;
 }
 
-.services .title {
+.poetries .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.services .title a {
+.poetries .title a {
   color: #111;
   transition: 0.3s;
 }
 
-.services .description {
+.poetries .description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+.poetries .icon-box:hover {
   border-color: #ffb727;
 }
 
-.services .icon-box:hover .title a {
+.poetries .icon-box:hover .title a {
   color: #ffb727;
 }
 

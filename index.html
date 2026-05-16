@@ -289,7 +289,7 @@
             <div class="grid grid-cols-2 gap-4 text-sm">
               <div class="space-y-3">
                 <div><span class="text-gray-500">Name</span><br><span class="text-white">Vaibhav Shukla</span></div>
-                <div><span class="text-gray-500">Based in</span><br><span class="text-white">Delhi / Mumbai</span></div>
+                <div><span class="text-gray-500">Based in</span><br><span class="text-white">Delhi / Bangalore</span></div>
                 <div><span class="text-gray-500">Website</span><br><a href="http://byvaibhav.com" target="_blank" class="text-accent hover:underline">byvaibhav.com</a></div>
               </div>
               <div class="space-y-3">
@@ -478,66 +478,164 @@
         <div class="reveal text-center mb-16">
           <p class="text-accent text-xs uppercase tracking-widest mb-3">Portfolio</p>
           <h2 class="font-display text-4xl font-bold text-white">My Work</h2>
-          <p class="text-gray-500 mt-3 text-sm">Some of my completed projects</p>
+          <p class="text-gray-500 mt-3 text-sm">Open source projects — built for real problems</p>
         </div>
 
         <div class="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-          <a href="https://neutraltip.herokuapp.com" target="_blank" class="work-card bg-card rounded-xl p-6 block group">
-            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-              <i class="bx bx-lock-alt text-accent text-lg"></i>
+          <!-- galedge — live -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-line-chart text-accent text-lg"></i>
+              </div>
+              <div class="flex gap-2">
+                <a href="https://galedge.byvaibhav.com" target="_blank" title="Live" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bx-link-external"></i></a>
+                <a href="https://github.com/mr-vaibh/galedge" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Galedge</h4>
+            <p class="text-gray-500 text-sm flex-1">Factor models, portfolio optimization, backtesting and live rebalancing on NSE data. 21-factor risk model, CVXPY optimizer, Brinson attribution. Full-stack: Next.js + FastAPI.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Next.js</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">FastAPI</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Finance</span>
+            </div>
+          </div>
+
+          <!-- park — live -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-pause-circle text-accent text-lg"></i>
+              </div>
+              <div class="flex gap-2">
+                <a href="https://park.byvaibhav.com" target="_blank" title="Live" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bx-link-external"></i></a>
+                <a href="https://github.com/mr-vaibh/park" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Park</h4>
+            <p class="text-gray-500 text-sm flex-1">Pause a running process and free its TCP port. Resume later — same PID and memory intact. Like Ctrl+Z but for servers.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">CLI</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Systems</span>
+            </div>
+          </div>
+
+          <!-- norespectforgraphicdesigners — live -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-laugh text-accent text-lg"></i>
+              </div>
+              <div class="flex gap-2">
+                <a href="https://norespectforgraphicdesigners.byvaibhav.com" target="_blank" title="Live" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bx-link-external"></i></a>
+                <a href="https://github.com/mr-vaibh/norespectforgraphicdesigners" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+            <h4 class="text-white font-semibold mb-2">No Respect for Graphic Designers</h4>
+            <p class="text-gray-500 text-sm flex-1">A brutal satirical tribute to frontend developers — roasting graphic designers, no-code tools, and everyone who confuses aesthetics with usability.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Satire</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Frontend</span>
+            </div>
+          </div>
+
+          <!-- confidant — source only -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-lock-alt text-accent text-lg"></i>
+              </div>
+              <a href="https://github.com/mr-vaibh/confidant" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
             </div>
             <h4 class="text-white font-semibold mb-2">Confidant</h4>
-            <p class="text-gray-500 text-sm">Encrypted environment variable SDK</p>
-            <div class="mt-4 flex items-center text-accent text-xs gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              <span>View project</span><i class="bx bx-arrow-back rotate-180"></i>
+            <p class="text-gray-500 text-sm flex-1">Environment secrets manager — securely manage and share encrypted env variables across teams and environments.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Security</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">DevOps</span>
             </div>
-          </a>
-
-          <a href="https://evolves.herokuapp.com" target="_blank" class="work-card bg-card rounded-xl p-6 block group">
-            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-              <i class="bx bx-line-chart text-accent text-lg"></i>
-            </div>
-            <h4 class="text-white font-semibold mb-2">NSE Pulse</h4>
-            <p class="text-gray-500 text-sm">Record and track historical data of NSE Stock Exchange</p>
-            <div class="mt-4 flex items-center text-accent text-xs gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              <span>View project</span><i class="bx bx-arrow-back rotate-180"></i>
-            </div>
-          </a>
-
-          <a href="https://longerr.herokuapp.com" target="_blank" class="work-card bg-card rounded-xl p-6 block group">
-            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-              <i class="bx bx-joystick text-accent text-lg"></i>
-            </div>
-            <h4 class="text-white font-semibold mb-2">VisualMotion Simulator</h4>
-            <p class="text-gray-500 text-sm">Game to measure response time of optical patients</p>
-            <div class="mt-4 flex items-center text-accent text-xs gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              <span>View project</span><i class="bx bx-arrow-back rotate-180"></i>
-            </div>
-          </a>
-
-          <div class="work-card bg-card rounded-xl p-6">
-            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-              <i class="bx bx-news text-accent text-lg"></i>
-            </div>
-            <h4 class="text-white font-semibold mb-2">Nerdsway</h4>
-            <p class="text-gray-500 text-sm">Newsletter website with advanced time-on-page algorithm</p>
           </div>
 
-          <div class="work-card bg-card rounded-xl p-6">
-            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-              <i class="bx bx-store text-accent text-lg"></i>
+          <!-- breakingbad-api — source only -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-code-alt text-accent text-lg"></i>
+              </div>
+              <a href="https://github.com/mr-vaibh/breakingbad-api" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
             </div>
-            <h4 class="text-white font-semibold mb-2">Evolves</h4>
-            <p class="text-gray-500 text-sm">E-commerce site with order tracking and Razorpay integration</p>
+            <h4 class="text-white font-semibold mb-2">Breaking Bad API</h4>
+            <p class="text-gray-500 text-sm flex-1">Fan-made REST API and themed web playground for the Breaking Bad universe — characters, episodes, quotes, deaths and locations. Built with FastAPI.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">FastAPI</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">REST API</span>
+            </div>
           </div>
 
-          <div class="work-card bg-card rounded-xl p-6">
-            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-              <i class="bx bx-graduation text-accent text-lg"></i>
+          <!-- youtube-ascii-player — source only -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-terminal text-accent text-lg"></i>
+              </div>
+              <a href="https://github.com/mr-vaibh/youtube-ascii-player" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
             </div>
-            <h4 class="text-white font-semibold mb-2">CBSE Result Viewer</h4>
-            <p class="text-gray-500 text-sm">Fetch results via CBSE's API by roll number — 2021 project</p>
+            <h4 class="text-white font-semibold mb-2">YouTube ASCII Player</h4>
+            <p class="text-gray-500 text-sm flex-1">Play any YouTube video in your terminal as colored ASCII art, with synced audio and full playback controls.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Terminal</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Python</span>
+            </div>
+          </div>
+
+          <!-- meramour — source only -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-joystick text-accent text-lg"></i>
+              </div>
+              <a href="https://github.com/mr-vaibh/meramour" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Meramour</h4>
+            <p class="text-gray-500 text-sm flex-1">Terminal-based 2D narrative stealth game controlled by WASD and git commands.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Game</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Terminal</span>
+            </div>
+          </div>
+
+          <!-- speechalyze — source only -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-microphone text-accent text-lg"></i>
+              </div>
+              <a href="https://github.com/mr-vaibh/speechalyze" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Speechalyze</h4>
+            <p class="text-gray-500 text-sm flex-1">Speech analysis tool — explore the repo for details.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Audio</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">ML</span>
+            </div>
+          </div>
+
+          <!-- minpaas — source only -->
+          <div class="work-card bg-card rounded-xl p-6 flex flex-col group">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                <i class="bx bx-cloud text-accent text-lg"></i>
+              </div>
+              <a href="https://github.com/mr-vaibh/minpaas" target="_blank" title="Source" class="text-gray-600 hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+            </div>
+            <h4 class="text-white font-semibold mb-2">MinPaaS</h4>
+            <p class="text-gray-500 text-sm flex-1">Single-machine, Docker-centric Platform as a Service built to understand how real PaaS systems work under the hood.</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Docker</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">PaaS</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">DevOps</span>
+            </div>
           </div>
 
         </div>
@@ -643,7 +741,7 @@
           MrVaiBH<span class="text-accent">.</span>
         </p>
         <p class="text-gray-500 text-sm leading-relaxed">
-          Software Engineer. Poet. Builder.<br>Based in Delhi &amp; Mumbai, India.
+          Software Engineer. Poet. Builder.<br>Based in Delhi &amp; Bangalore, India.
         </p>
       </div>
 

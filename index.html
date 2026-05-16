@@ -164,27 +164,21 @@
       background: rgba(10,10,10,0.72);
     }
 
-    /* tech tags */
-    .tag {
-      font-size: 0.7rem; padding: 2px 8px; border-radius: 999px;
-      background: #f59e0b1a; color: rgba(251,191,36,0.75);
-    }
-
-    /* project link pills — same row as tags */
+    /* project link pills */
     .project-link-live {
-      display: inline-flex; align-items: center; gap: 3px;
-      font-size: 0.7rem; padding: 2px 8px; border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.72rem; padding: 3px 10px; border-radius: 999px;
       background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b44;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
     }
     .project-link-live:hover { background: #f59e0b33; }
     .project-link-code {
-      display: inline-flex; align-items: center; gap: 3px;
-      font-size: 0.7rem; padding: 2px 8px; border-radius: 999px;
-      background: #ffffff08; color: #666; border: 1px solid #2a2a2a;
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.72rem; padding: 3px 10px; border-radius: 999px;
+      background: #ffffff0a; color: #888; border: 1px solid #2a2a2a;
       transition: background 0.2s, color 0.2s;
     }
-    .project-link-code:hover { background: #ffffff12; color: #aaa; }
+    .project-link-code:hover { background: #ffffff14; color: #ccc; }
 
     /* section fade-in on scroll */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -512,10 +506,18 @@
             </div>
             <h4 class="text-white font-semibold mb-2">Galedge</h4>
             <p class="text-gray-500 text-sm flex-1">Factor models, portfolio optimization, backtesting and live rebalancing on NSE data. 21-factor risk model, CVXPY optimizer, Brinson attribution. Full-stack: Next.js + FastAPI.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Quant Investing</span><span class="tag">Next.js</span><span class="tag">FastAPI</span>
-              <a href="https://galedge.byvaibhav.com" target="_blank" class="project-link-live"><i class="bx bx-link-external text-xs"></i> Live</a>
-              <a href="https://github.com/mr-vaibh/galedge" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Quant Investing</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Next.js</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">FastAPI</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://galedge.byvaibhav.com" target="_blank" class="project-link-live">
+                <i class="bx bx-link-external text-xs"></i> Live
+              </a>
+              <a href="https://github.com/mr-vaibh/galedge" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -526,10 +528,17 @@
             </div>
             <h4 class="text-white font-semibold mb-2">Park</h4>
             <p class="text-gray-500 text-sm flex-1">Pause a running process and free its TCP port. Resume later — same PID and memory intact. Like Ctrl+Z but for servers.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">CLI</span><span class="tag">Systems</span>
-              <a href="https://park.byvaibhav.com" target="_blank" class="project-link-live"><i class="bx bx-link-external text-xs"></i> Live</a>
-              <a href="https://github.com/mr-vaibh/park" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">CLI</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Systems</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://park.byvaibhav.com" target="_blank" class="project-link-live">
+                <i class="bx bx-link-external text-xs"></i> Live
+              </a>
+              <a href="https://github.com/mr-vaibh/park" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -540,10 +549,17 @@
             </div>
             <h4 class="text-white font-semibold mb-2">No Respect for Graphic Designers</h4>
             <p class="text-gray-500 text-sm flex-1">A brutal satirical tribute to frontend developers — roasting graphic designers, no-code tools, and everyone who confuses aesthetics with usability.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Satire</span><span class="tag">Frontend</span>
-              <a href="https://norespectforgraphicdesigners.byvaibhav.com" target="_blank" class="project-link-live"><i class="bx bx-link-external text-xs"></i> Live</a>
-              <a href="https://github.com/mr-vaibh/norespectforgraphicdesigners" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Satire</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Frontend</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://norespectforgraphicdesigners.byvaibhav.com" target="_blank" class="project-link-live">
+                <i class="bx bx-link-external text-xs"></i> Live
+              </a>
+              <a href="https://github.com/mr-vaibh/norespectforgraphicdesigners" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -554,10 +570,17 @@
             </div>
             <h4 class="text-white font-semibold mb-2">Breaking Bad API</h4>
             <p class="text-gray-500 text-sm flex-1">Fan-made REST API and themed web playground for the Breaking Bad universe — characters, episodes, quotes, deaths and locations. Built with FastAPI.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">FastAPI</span><span class="tag">REST API</span>
-              <a href="https://breakingbad-api.byvaibhav.com/" target="_blank" class="project-link-live"><i class="bx bx-link-external text-xs"></i> Live</a>
-              <a href="https://github.com/mr-vaibh/breakingbad-api" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">FastAPI</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">REST API</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://breakingbad-api.byvaibhav.com/" target="_blank" class="project-link-live">
+                <i class="bx bx-link-external text-xs"></i> Live
+              </a>
+              <a href="https://github.com/mr-vaibh/breakingbad-api" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -568,9 +591,14 @@
             </div>
             <h4 class="text-white font-semibold mb-2">Confidant</h4>
             <p class="text-gray-500 text-sm flex-1">Environment secrets manager — securely manage and share encrypted env variables across teams and environments.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Security</span><span class="tag">DevOps</span>
-              <a href="https://github.com/mr-vaibh/confidant" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Security</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">DevOps</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://github.com/mr-vaibh/confidant" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -581,9 +609,14 @@
             </div>
             <h4 class="text-white font-semibold mb-2">YouTube ASCII Player</h4>
             <p class="text-gray-500 text-sm flex-1">Play any YouTube video in your terminal as colored ASCII art, with synced audio and full playback controls.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Terminal</span><span class="tag">Python</span>
-              <a href="https://github.com/mr-vaibh/youtube-ascii-player" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Terminal</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Python</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://github.com/mr-vaibh/youtube-ascii-player" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -594,9 +627,14 @@
             </div>
             <h4 class="text-white font-semibold mb-2">Meramour</h4>
             <p class="text-gray-500 text-sm flex-1">Terminal-based 2D narrative stealth game controlled by WASD and git commands.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Game</span><span class="tag">Terminal</span>
-              <a href="https://github.com/mr-vaibh/meramour" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Game</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Terminal</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://github.com/mr-vaibh/meramour" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -607,9 +645,14 @@
             </div>
             <h4 class="text-white font-semibold mb-2">Speechalyze</h4>
             <p class="text-gray-500 text-sm flex-1">Speech analysis tool — explore the repo for details.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Audio</span><span class="tag">ML</span>
-              <a href="https://github.com/mr-vaibh/speechalyze" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Audio</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">ML</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://github.com/mr-vaibh/speechalyze" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 
@@ -620,9 +663,15 @@
             </div>
             <h4 class="text-white font-semibold mb-2">MinPaaS</h4>
             <p class="text-gray-500 text-sm flex-1">Single-machine, Docker-centric Platform as a Service built to understand how real PaaS systems work under the hood.</p>
-            <div class="mt-4 flex gap-1.5 flex-wrap items-center">
-              <span class="tag">Docker</span><span class="tag">PaaS</span><span class="tag">DevOps</span>
-              <a href="https://github.com/mr-vaibh/minpaas" target="_blank" class="project-link-code"><i class="bx bxl-github text-xs"></i> Code</a>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">Docker</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">PaaS</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent/80">DevOps</span>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-800 flex gap-2">
+              <a href="https://github.com/mr-vaibh/minpaas" target="_blank" class="project-link-code">
+                <i class="bx bxl-github text-xs"></i> Code
+              </a>
             </div>
           </div>
 

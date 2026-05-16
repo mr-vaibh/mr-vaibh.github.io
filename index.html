@@ -1,846 +1,710 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-	<!--**********************************************************************************-->
-    <!-- Copyright (c) Vaibhav Shukla -->
-    <!-- “If you have came here so far, DM me on instagram, here is the ID - @mrvaibh0” -->
-    <!--**********************************************************************************-->
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, height=device-height">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vaibhav Shukla — Software Engineer</title>
+  <meta name="description" content="Hi, I am Vaibhav Shukla, better known as MrVaiBH. I'm a professional software developer and engineer from Dwarka, New Delhi, India.">
+  <meta name="keywords" content="mrvaibh, mrv, vaibhav shukla, vaibhav">
+  <meta name="google-site-verification" content="xJGWA3r9k-uoY68neDY5c2M6h6va9qmdfJMP_CjRs30" />
 
-	<title>Vaibhav Shukla aka MrVaiBH | Official Website</title>
-	<meta name="description" content="Hi, I am Vaibhav Shukla, better known as MrVaiBH. I'm a professional software developer and engineer from Dwarka, New Delhi, India.">
-	<meta name="keywords" content="mrvaibh, mrv, vaibhav shukla, vaibhav">
-	<meta name="google-site-verification" content="xJGWA3r9k-uoY68neDY5c2M6h6va9qmdfJMP_CjRs30" />
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQW2WJB45B"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQW2WJB45B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FQW2WJB45B');
+  </script>
 
-	  gtag('config', 'G-FQW2WJB45B');
-	</script>
+  <!-- OG -->
+  <meta property="og:url" content="https://mr-vaibh.github.io/">
+  <meta property="og:title" content="Vaibhav Shukla — Software Engineer">
+  <meta property="og:image" content="assets/img/vaibhav-circle-transparent.png">
+  <meta property="og:description" content="Software Engineer. Poetry. Football. Cinema.">
 
-	<meta property="og:url" content="https://vaibhav-shukla.herokuapp.com/">
-	<meta property="og:title" content="Vaibhav Shukla aka MrVaiBH">
-	<meta property="og:image" content="https://vaibhav-shukla.herokuapp.com/static/assets/img/vaibhav-circle-transparent.png">
-	<meta property="og:site_name" content="Vaibhav Shukla aka MrVaiBH">
-	<meta property="og:description" content="Hi, I am Vaibhav Shukla, better known as MrVaiBH. I'm a professional software developer and engineer from Dwarka, New Delhi, India.">
+  <!-- Favicon -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-	<meta itemprop="name" content="Vaibhav Shukla aka MrVaiBH">
-	<meta itemprop="description" content="Hi, I am Vaibhav Shukla, better known as MrVaiBH. I'm a professional software developer and engineer from Dwarka, New Delhi, India.">
-	<meta itemprop="image" content="https://vaibhav-shukla.herokuapp.com/static/assets/img/vaibhav-circle-transparent.png">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#f59e0b',
+            dark: '#0a0a0a',
+            surface: '#111111',
+            card: '#1a1a1a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.6s ease forwards',
+            'fade-in': 'fadeIn 0.8s ease forwards',
+            'blink': 'blink 1s step-end infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
+            },
+          },
+        }
+      }
+    }
+  </script>
 
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Vaibhav Shukla aka MrVaiBH">
-	<meta name="twitter:description" content="Hi, I am Vaibhav Shukla, better known as MrVaiBH. I'm a professional software developer and engineer from Dwarka, New Delhi, India.">
-	<meta name="twitter:image" content="https://vaibhav-shukla.herokuapp.com/static/assets/img/vaibhav-circle-transparent.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
-	<!-- Favicons -->
-	<link href="assets/img/favicon.png" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
 
-	<!-- Vendor CSS Files -->
-	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-	<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    html { background: #0a0a0a; }
 
-	<!-- Template Main CSS File -->
-	<link href="assets/css/style.css" rel="stylesheet">
+    ::selection { background: #f59e0b33; color: #f59e0b; }
 
-	<!-- Schema.org -->
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Vaibhav Shukla",
-		"url": "https://vaibhav-shukla.herokuapp.com/",
-		"description": "Hi, I am Vaibhav Shukla, better known as MrVaiBH. I'm a professional software developer and engineer from Dwarka, New Delhi, India.",
-		"sameAs": [
-			"https://www.wikidata.org/wiki/Q110281927",
-			"https://www.crunchbase.com/person/vaibhav-shukla-f6fa",
-			"https://twitter.com/MrVaiBH0",
-			"https://www.instagram.com/mrvaibh0/",
-			"https://www.linkedin.com/in/mrvaibh/"
-		],
-		"image": "https://vaibhav-shukla.herokuapp.com/static/assets/img/vaibhav-circle-transparent.png",
-		"jobTitle": "Software Engineer",
-		"worksFor": {
-			"@type": "Organization",
-			"name": "MRVAIBH",
-			"url": "https://mrvaibh.herokuapp.com/",
-			"logo": "https://mrvaibh.herokuapp.com/img/logo/mr-vaibh.png",
-			"sameAs": [
-				"https://www.wikidata.org/wiki/Q110158614",
-				"https://www.crunchbase.com/organization/mrvaibh",
-				"https://www.linkedin.com/in/mrvaibh/"
-			]
-		}
-	}
-	</script>
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #f59e0b66; border-radius: 2px; }
 
+    /* nav underline effect */
+    .nav-link {
+      position: relative;
+      color: #aaa;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: #f59e0b;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active { color: #f59e0b; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+    /* hero bg */
+    #hero {
+      background-image: url('assets/img/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 100%);
+    }
+
+    /* about bg image */
+    .about-img {
+      background-image: url('assets/img/me.jpg');
+      background-size: cover;
+      background-position: center top;
+    }
+
+    /* card hover */
+    .work-card {
+      border: 1px solid #2a2a2a;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .work-card:hover {
+      border-color: #f59e0b55;
+      transform: translateY(-4px);
+    }
+
+    /* poetry card */
+    .poetry-card {
+      border-left: 2px solid #2a2a2a;
+      transition: border-color 0.3s;
+    }
+    .poetry-card:hover { border-left-color: #f59e0b; }
+
+    /* timeline */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1px; top: 8px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #f59e0b;
+      border: 2px solid #0a0a0a;
+    }
+
+    /* section fade-in on scroll */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* form inputs */
+    .form-input {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      color: #e5e5e5;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus { outline: none; border-color: #f59e0b; }
+    .form-input::placeholder { color: #555; }
+
+    /* mobile nav overlay */
+    #mobile-nav {
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    /* gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
 </head>
 
-<body>
-
-	<!-- ======= Header ======= -->
-	<header id="header" class="fixed-top  d-flex justify-content-center align-items-center header-transparent">
-
-		<nav class="nav-menu d-none d-lg-block">
-			<ul>
-				<li class="active"><a href="#hero">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#resume">Resume</a></li>
-				<li><a href="#poetries">Poetries</a></li>
-				<li><a href="#work">Work</a></li>
-				<li><a href="#gallery">Gallery</a></li>
-				<!-- <li><a href="https://mrvaibh.notion.site/Vaibhav-s-Realm-4b235f7ed7f6473c9f5c1ace52e83a92" target="_blank" rel="noopener noreferrer">Diary</a></li> -->
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav><!-- .nav-menu -->
-
-	</header><!-- End Header -->
-
-	<!-- ======= Hero Section ======= -->
-	<section id="hero">
-		<div class="hero-container">
-			<h1>Vaibhav Shukla</h1>
-			<h2>A candle flame in a world of LED</h2>
-			<a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
-		</div>
-	</section><!-- End Hero -->
-
-	<main id="main">
-
-		<!-- ======= About Me Section ======= -->
-		<section id="about" class="about">
-			<div class="container">
-
-				<div class="section-title">
-					<span>About Me</span>
-					<h2>About Me</h2>
-					<p>Software Engineer since 2016. Poetry. Football. Cinema.</p>
-					<br>
-					<p>(pic location: MKT, Delhi)</p>
-				</div>
-
-				<div class="row">
-					<div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-					<div class="col-lg-8 d-flex flex-column align-items-stretch">
-						<div class="content pl-lg-4 d-flex flex-column justify-content-center">
-							<div class="row">
-								<div class="col-lg-6">
-									<ul>
-										<li><i class="icofont-rounded-right"></i> <strong>Name:</strong> Vaibhav Shukla</li>
-										<li><i class="icofont-rounded-right"></i> <strong>Website:</strong> <a href="http://byvaibhav.com" target="_blank">byvaibhav.com</a></li>
-										<li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +91 745 794 7897 </li>
-										<li><i class="icofont-rounded-right"></i> <strong>City:</strong> Delhi / Mumbai</li>
-									</ul>
-								</div>
-								<div class="col-lg-6">
-									<ul>
-										<li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 22 years</li>
-										<li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> B. Tech CSE</li>
-										<li><i class="icofont-rounded-right"></i> <strong>Email:</strong> shuklavaibhav336@gmail.com</li>
-										<li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
-									</ul>
-								</div>
-							</div>
-						</div><!-- End .content-->
-
-					</div>
-				</div>
-
-			</div>
-		</section><!-- End About Me Section -->
-
-		<!-- ======= My Resume Section ======= -->
-		<section id="resume" class="resume">
-		  <div class="container">
-		
-		    <div class="section-title">
-		      <span>My Resume</span>
-		      <h2>My Resume</h2>
-		      <p>Here is Vaibhav's resume, feel free to <a href="/resume" target="_blank">open pdf</a>.</p>
-		    </div>
-		
-		    <div class="row">
-		      <div class="col-lg-6">
-			<h3 class="resume-title">Summary</h3>
-			<div class="resume-item pb-0">
-			  <h4>Vaibhav Shukla</h4>
-			  <p><em>Software builder at heart with 9+ years of full-stack and backend experience, starting in school. Final-year B.Tech CSE student building OSS tools and scalable production systems.</em></p>
-			</div>
-		
-			<h3 class="resume-title">Education</h3>
-			<div class="resume-item">
-			  <h4>B.Tech Computer Science & Engineering</h4>
-			  <h5>2022 – Present</h5>
-			  <p><em>Amity University Haryana</em></p>
-			  <p>GPA: 8.59 / 10.0</p>
-			</div>
-			<div class="resume-item">
-			  <h4>XII - CBSE Boards</h4>
-			  <h5>2021</h5>
-			  <p><em>Paramount International School, Dwarka, ND</em></p>
-			  <p>Physics, Chemistry, Maths | 90%</p>
-			</div>
-		      </div>
-		
-		      <div class="col-lg-6">
-			<h3 class="resume-title">Professional Experience</h3>
-		
-			<div class="resume-item">
-			  <h4>Senior Software Engineer</h4>
-			  <h5>Mar 2025 – Present</h5>
-			  <p><em>Method Tech</em></p>
-			  <ul>
-			    <li>Architected and built data-heavy frontend systems rendering 10M+ lines of real-time server data with advanced Redux-based state management and optimized access patterns.</li>
-			    <li>Built a pixel-perfect, Figma-matching, metadata-driven UI system supporting complex behaviors like nested dropdowns, graphs, and layout switches from backend schemas.</li>
-			    <li>Developed microservices and REST APIs powering financial data pipelines with strong data contracts and automated test coverage.</li>
-			    <li>Designed extensible relational database schemas emphasizing data integrity and growth-aligned structure.</li>
-			    <li>Implemented scalable scraping systems handling thousands of AMC records with post-processing logic.</li>
-			    <li>Set up Docker-based CI/CD pipelines, automated testing, and live previews across staging/production.</li>
-			    <li>Contributed to technical leadership through interviews, code reviews, and mentoring efforts.</li>
-			  </ul>
-			</div>
-		
-			<div class="resume-item">
-			  <h4>Software Engineer</h4>
-			  <h5>Jul 2022 – Jan 2024</h5>
-			  <p><em>Allorasoft, Dwarka, ND</em></p>
-			  <ul>
-			    <li>Built and maintained 3 SPAs in React, improving UX and frontend performance.</li>
-			    <li>Dockerized app environments for faster deployment and CI efficiency.</li>
-			    <li>Automated biometric punch syncing using CRON scripts with Django backend and pyzk integration.</li>
-			    <li>Designed a multi-threaded Attendance Management System with TCP/UDP mocks for simulation.</li>
-			    <li>Created a custom JavaScript library that improved frontend load time by 28% (Chrome Lighthouse).</li>
-			    <li>Developed a React-like component system using jQuery/Vanilla JS with dynamic CDN and version control.</li>
-			    <li>Built REST APIs in Java for attendance and payroll reporting.</li>
-			    <li>Developed a server monitoring tool with real-time alerts to reduce SSH-based health checks.</li>
-			  </ul>
-			</div>
-		      </div>
-		    </div>
-		
-		  </div>
-		</section><!-- End My Resume Section -->
-
-
-		<!-- ======= My Poetries Section ======= -->
-		<section id="poetries" class="poetries">
-			<div class="container" style="cursor: pointer;" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28&pvs=74', '_blank')">
-
-				<div class="section-title">
-					<span>My Poetries</span>
-					<h2>My Poetries</h2>
-					<p>NOTE: these are trimmed portions, click to read full</p>
-				</div>
-
-				<div class="row">
-					<!--  Sample card -->
-					<!-- <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<div class="icon"><i class="bx bx-file"></i></div>
-							<h4 class="title"><a href="#">Just Like that</a></h4>
-							<p class="description">I can make full-fledged secure websites for literally any purpose.</p>
-						</div>
-					</div> -->
-
-					<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Just Like that</a></h4>
-							<p class="description text-justify" style="font-size: 0.8rem;">
-								I love you as if my heart has gone wild <br>
-								I love you like my own child, <br>
-								I love you like a soldier coming back to his wife, <br>
-								I love you like that <br>
-								... <br>
-								I love you and I wish I could love some more <br>
-								I love you with a heartache, cuts deep to core <br>
-								For your voice hard to ignore and eyes I adore <br>
-								I like you like that
-							</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Give me one reason to stop</a></h4>
-							<p class="description text-justify" style="font-size: 0.8rem;">
-								I stand on the edge, <br>
-								The bus is coming fast. <br>
-								I could close my eyes <br>
-								And let it all be past. <br>
-								But give me one reason to stop <br>
-
-								... <br>
-
-								In the depths of hope, my soul cries, <br>
-								In the debts of sorrow, my happiness flies, <br>
-								These echoes of grief and haunting lullabies. <br>
-								To give me one reason to stop.
-							</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Don't teach me to love</a></h4>
-							<p class="description text-justify" style="font-size: 0.8rem;">
-								O, don't teach me to love, <br>
-								For I'm a master of the art of it <br>
-
-								... <br>
-
-								“Does love still resonates after we die?” <br>
-								An oblivious one asks me passing by <br>
-
-								“No”, I said, “hormones die with the body”, <br>
-								All of love ever was, lived only in mind <br>
-
-								Underneath the grave though, a tale gets to live, <br>
-								A tale that speaks of one of only it’s kind
-							</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 mt-3">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Tu pahli to nahi</a></h4>
-							<p class="description text-justify" style="font-size: 0.8rem;">
-								Thokaren pahle bhi khayin hain tu pahli to nahi <br>
-								Jhoothi aas me bita ye pahla saal nahi <br>
-								Uljhi hi jaa rahi hai ye kahani paheli to nahi <br>
-								Zindgi banti jaa rahi hai narak ki saheli to nahi <br>
-								Pyaar samajhne ki koshish to kar jhootha hi sahi <br>
-								... <br>
-								Tere vaste sab chhod dunga lage na bas yahi <br>
-								Isi baat pe thi vo maine pahli baat kahi <br>
-								Thokaren pahle bhi khayin hain tu pahli to nahi
-							</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 mt-3">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Bas ki nahi</a></h4>
-							<p class="description text-justify" style="font-size: 0.8rem;">
-								Ye ishq ka maghaz mere bas ki nahi <br>
-								Ye anjam-e-ishq beshumar itni sasti nahi <br>
-								Apni safalta pe bohot ghuroor hai use <br>
-								In ashko me dekho meri koshishein <br>
-								Jinme kaise doob gayi thi kashti meri <br>
-								Muh mod lene se bala talegi ye na samjh <br>
-								Meri o nasamajh muh mod ke tu jachti nahi <br>
-								Teri mafi nahi bas teri khair chahiye <br>
-								Khair samjhaun bhi kaise jab tu samjhti nahi
-							</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 mt-3">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Mere pas aaoge</a></h4>
-							<p class="description text-justify" style="font-size: 0.8rem;">
-								Jab duniya beswaad lagegi <br>
-								Jab kiye pe pachhtaoge <br>
-								Jab pyaar ki bhookh me, roti bhi na paoge <br>
-								Tab mere pas aaoge <br>
-								... <br>
-								Jab khata ka bojh na seh paoge <br>
-								Jab zulm aakhir khud sar uthaoge <br>
-								Khud ke jazeere me khud ko kayd paoge <br>
-								Tab mere pas aaoge
-							</p>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</section><!-- End My Poetries Section -->
-
-
-		<!-- ======= My Work Section ======= -->
-		<section id="work" class="poetries">
-			<div class="container">
-
-				<div class="section-title">
-					<span>My Work</span>
-					<h2>My Work</h2>
-					<p>Some of my "completed" projects</p>
-				</div>
-
-				<div class="row justify-content-center">
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="https://neutraltip.herokuapp.com">Confidant</a></h4>
-							<p class="description">Encrypted environment variable SDK</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="https://evolves.herokuapp.com">NSE Pulse</a></h4>
-							<p class="description">Record and track historical data of NSE Stock Exchange</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="https://longerr.herokuapp.com">VisualMotion Simulator</a></h4>
-							<p class="description">Game to measure response time of optical patients</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Nerdsway</a></h4>
-							<p class="description">Newsletter website with advanced time-on-page algorithm</p>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="row justify-content-center mt-5">
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">Evolves</a></h4>
-							<p class="description">E-commerce site with order tracking and Razorpay payment integration</p>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-						<div class="icon-box col-12">
-							<h4 class="title"><a href="#">CBSE result viewer</a></h4>
-							<p class="description">(DEPRECATED) Using CBSE's API to fetch result by roll number--2021 project</p>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</section><!-- End My Poetries Section -->
-
-		<!-- ======= Testimonials Section ======= -->
-		<section id="testimonials" class="testimonials">
-			<div class="container">
-				<!-- <h3 style="color: #fff;">Blank space just for a metaphor<h3> -->
-					<div class="owl-carousel testimonials-carousel">
-						
-						<div class="testimonial-item">
-							<p>
-								<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-								<br><br><br>
-								Blank space just for a metaphor
-								<br><br><br>
-								<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-							</p>
-						</div>
-					</div>
-
-				<!-- <div class="owl-carousel testimonials-carousel">
-
-					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-						<h3>Saul Goodman</h3>
-						<h4>Ceo &amp; Founder</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
-					</div>
-
-					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-						<h3>Sara Wilsson</h3>
-						<h4>Designer</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
-					</div>
-
-					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-						<h3>Jena Karlis</h3>
-						<h4>Store Owner</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
-					</div>
-
-					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-						<h3>Matt Brandon</h3>
-						<h4>Freelancer</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
-					</div>
-
-					<div class="testimonial-item">
-						<img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-						<h3>John Larson</h3>
-						<h4>Entrepreneur</h4>
-						<p>
-							<i class="bx bxs-quote-alt-left quote-icon-left"></i>
-							Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-							<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-						</p>
-					</div>
-
-				</div> -->
-
-			</div>
-		</section><!-- End Testimonials Section -->
-
-		<!-- ======= My Portfolio Section ======= -->
-<!-- 		<section id="gallery" class="portfolio">
-			<div class="container">
-
-				<div class="section-title">
-					<span>My Gallery</span>
-					<h2>My Gallery</h2>
-					<p>random photo dump, Disclaimer: don't download 'em, they're bad for your drive</p>
-				</div>
-
-				<ul id="portfolio-flters" class="d-flex justify-content-center">
-					<li data-filter="*" class="filter-active">All</li>
-					<li data-filter=".filter-app">App</li>
-					<li data-filter=".filter-card">Card</li>
-					<li data-filter=".filter-web">Web</li>
-				</ul>
-
-				<div class="row portfolio-container">
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>App 1</h4>
-							<p>App</p>
-							<a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>Web 3</h4>
-							<p>Web</p>
-							<a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>App 2</h4>
-							<p>App</p>
-							<a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>Card 2</h4>
-							<p>Card</p>
-							<a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>Web 2</h4>
-							<p>Web</p>
-							<a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>App 3</h4>
-							<p>App</p>
-							<a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>Card 1</h4>
-							<p>Card</p>
-							<a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>Card 3</h4>
-							<p>Card</p>
-							<a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-						<div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-						<div class="portfolio-info">
-							<h4>Web 3</h4>
-							<p>Web</p>
-							<a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-							<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</section> -->
-		<!-- End My Portfolio Section -->
-
-		<!-- ======= Pricing Section ======= -->
-		<!-- <section id="pricing" class="pricing">
-			<div class="container">
-
-				<div class="section-title">
-					<span>Pricing</span>
-					<h2>Pricing</h2>
-					<p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
-				</div>
-
-				<div class="row">
-
-					<div class="col-lg-3 col-md-6">
-						<div class="box">
-							<h3>Free</h3>
-							<h4><sup>$</sup>0<span> / month</span></h4>
-							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li class="na">Pharetra massa</li>
-								<li class="na">Massa ultricies mi</li>
-							</ul>
-							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-						<div class="box featured">
-							<h3>Business</h3>
-							<h4><sup>$</sup>19<span> / month</span></h4>
-							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li class="na">Massa ultricies mi</li>
-							</ul>
-							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-						<div class="box">
-							<h3>Developer</h3>
-							<h4><sup>$</sup>29<span> / month</span></h4>
-							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li>Massa ultricies mi</li>
-							</ul>
-							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-						<div class="box">
-							<span class="advanced">Advanced</span>
-							<h3>Ultimate</h3>
-							<h4><sup>$</sup>49<span> / month</span></h4>
-							<ul>
-								<li>Aida dere</li>
-								<li>Nec feugiat nisl</li>
-								<li>Nulla at volutpat dola</li>
-								<li>Pharetra massa</li>
-								<li>Massa ultricies mi</li>
-							</ul>
-							<div class="btn-wrap">
-								<a href="#" class="btn-buy">Buy Now</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</section> --><!-- End Pricing Section -->
-
-		<!-- ======= Contact Me Section ======= -->
-		<section id="contact" class="contact">
-			<div class="container">
-
-				<div class="section-title">
-					<span>Contact Me</span>
-					<h2>Contact Me</h2>
-					<p>Feel free to reach me out anytime</p>
-				</div>
-
-				<div class="row">
-
-					<div class="col-lg-6">
-
-						<div class="row">
-							<div class="col-md-12">
-								<div class="info-box">
-									<i class="bx bx-share-alt"></i>
-									<h3>Social Profiles</h3>
-									<div class="social-links">
-										<a href="https://twitter.com/MrVaiBH0" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
-										<a href="https://www.facebook.com/MrVaiBH0" target="_blank"  class="facebook"><i class="icofont-facebook"></i></a>
-										<a href="https://www.instagram.com/mrvaibh0" target="_blank"  class="instagram"><i class="icofont-instagram"></i></a>
-										<!-- <a href="https://github.com/mr-vaibh" target="_blank"  class="github"><i class="icofont-github"></i></a> -->
-										<a href="https://github.com/mr-vaibh" target="_blank"  class="bx bxl-github"></a>
-										<a href="https://www.linkedin.com/in/mrvaibh" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="info-box mt-4">
-									<i class="bx bx-envelope"></i>
-									<h3>Email Me</h3>
-									<p>shuklavaibhav336@gmail.com</p>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="info-box mt-4">
-									<i class="bx bx-phone-call"></i>
-									<h3>Call Me</h3>
-									<p>+91 745 794 7897</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-lg-6">
-						<form action="https://formsubmit.co/d2254e92ddd10a1d1ea1ebc872618a62" method="post" role="form" class="email-form">
-							<input type="hidden" name="_captcha" value="false" />
-							<input type="hidden" name="_autoresponse" value="Hi, I am MrVaiBH's personal bot :) Thanks for reaching out, he'll reply soon if he gets time." />
-							
-							<div class="form-row">
-								<div class="col-md-6 form-group">
-									<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-									<div class="validate"></div>
-								</div>
-								<div class="col-md-6 form-group">
-									<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-									<div class="validate"></div>
-								</div>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-								<div class="validate"></div>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control" name="message" rows="6" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-								<div class="validate"></div>
-							</div>
-							<div class="mb-3">
-								<div class="loading">Loading</div>
-								<div class="error-message"></div>
-								<div class="sent-message">Your message has been sent. Thank you!</div>
-							</div>
-							<div class="text-center"><button type="submit">Send Message</button></div>
-						</form>
-					</div>
-
-				</div>
-
-			</div>
-		</section><!-- End Contact Me Section -->
-
-	</main><!-- End #main -->
-
-	<!-- ======= Footer ======= -->
-	<footer id="footer">
-		<div class="container">
-			<h3>Vaibhav Shukla</h3>
-			<p>Thanks for visiting my website. You can contact me anytime without hesitation. Suggest your others friends about me :&rpar;</p>
-			<div class="social-links">
-				<a href="https://twitter.com/MrVaiBH0" class="twitter"><i class="bx bxl-twitter"></i></a>
-				<a href="https://www.facebook.com/MrVaiBH0" class="facebook"><i class="bx bxl-facebook"></i></a>
-				<a href="https://www.instagram.com/mrvaibh0" class="instagram"><i class="bx bxl-instagram"></i></a>
-				<a href="https://github.com/mr-vaibh" class="github"><i class="bx bxl-github"></i></a>
-				<a href="https://www.linkedin.com/in/mrvaibh" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-			</div>
-			<div class="copyright">
-				&copy; Copyright <strong><span>Vaibhav</span></strong>. All Rights Reserved
-			</div>
-			<div class="credits">
-				<!-- All the links in the footer should remain intact. -->
-				<!-- You can delete the links only if you purchased the pro version. -->
-				<!-- Licensing information: https://bootstrapmade.com/license/ -->
-				<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
-				Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-			</div>
-		</div>
-	</footer><!-- End Footer -->
-
-	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-	<!-- Vendor JS Files -->
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-	<script src="assets/vendor/email-form/validate.js"></script>
-	<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-	<script src="assets/vendor/counterup/counterup.min.js"></script>
-	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/venobox/venobox.min.js"></script>
-
-	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
+<body class="bg-dark text-gray-300 font-sans antialiased">
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="#hero" class="text-white font-display font-bold text-lg tracking-wide">
+        MrVaiBH<span class="text-accent">.</span>
+      </a>
+
+      <!-- desktop nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#poetries" class="nav-link">Poetries</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- mobile hamburger -->
+      <button id="menu-btn" class="md:hidden text-gray-400 hover:text-accent transition-colors">
+        <i class="bx bx-menu text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- mobile nav -->
+  <div id="mobile-nav" class="fixed inset-0 z-40 bg-dark/95 backdrop-blur-sm flex flex-col items-center justify-center gap-10 opacity-0 invisible">
+    <button id="menu-close" class="absolute top-5 right-6 text-gray-400 hover:text-accent">
+      <i class="bx bx-x text-3xl"></i>
+    </button>
+    <a href="#about" class="mobile-nav-link text-2xl text-white font-display">About</a>
+    <a href="#resume" class="mobile-nav-link text-2xl text-white font-display">Resume</a>
+    <a href="#poetries" class="mobile-nav-link text-2xl text-white font-display">Poetries</a>
+    <a href="#work" class="mobile-nav-link text-2xl text-white font-display">Work</a>
+    <a href="#contact" class="mobile-nav-link text-2xl text-white font-display">Contact</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+    <div class="relative z-10 px-6 max-w-3xl mx-auto">
+      <p class="text-accent text-sm uppercase tracking-[0.25em] mb-4 animate-fade-in" style="animation-delay:0.2s;opacity:0">
+        Software Engineer · Poet · Human
+      </p>
+      <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-up" style="animation-delay:0.4s;opacity:0">
+        Vaibhav Shukla
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 italic font-display animate-fade-up" style="animation-delay:0.6s;opacity:0">
+        "A candle flame in a world of LED"
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-4 animate-fade-up" style="animation-delay:0.8s;opacity:0">
+        <a href="#about" class="px-6 py-3 bg-accent text-dark font-semibold rounded-full text-sm hover:bg-yellow-400 transition-colors">
+          Know me
+        </a>
+        <a href="#contact" class="px-6 py-3 border border-gray-600 text-gray-300 rounded-full text-sm hover:border-accent hover:text-accent transition-colors">
+          Get in touch
+        </a>
+      </div>
+      <!-- scroll cue -->
+      <div class="mt-16 animate-bounce opacity-40">
+        <i class="bx bx-chevron-down text-3xl text-accent"></i>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="py-28 bg-surface">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal grid md:grid-cols-2 gap-16 items-center">
+
+          <!-- photo -->
+          <div class="flex justify-center">
+            <div class="relative">
+              <div class="w-72 h-72 md:w-80 md:h-80 about-img rounded-2xl shadow-2xl"></div>
+              <!-- decorative frame -->
+              <div class="absolute -bottom-4 -right-4 w-72 h-72 md:w-80 md:h-80 border border-accent/30 rounded-2xl -z-10"></div>
+              <div class="absolute -top-3 -left-3 w-12 h-12 bg-accent/10 rounded-full blur-xl"></div>
+            </div>
+          </div>
+
+          <!-- content -->
+          <div>
+            <p class="text-accent text-xs uppercase tracking-widest mb-3">About me</p>
+            <h2 class="font-display text-4xl font-bold text-white mb-5">Who I am</h2>
+            <p class="text-gray-400 leading-relaxed mb-8">
+              Software builder at heart with 9+ years of full-stack and backend experience, starting in school.
+              Final-year B.Tech CSE student building OSS tools and scalable production systems.
+              When not shipping code, I write Urdu poetry, watch cinema, and play football.
+            </p>
+            <p class="text-xs text-gray-600 italic mb-8">(pic location: MKT, Delhi)</p>
+
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="space-y-3">
+                <div><span class="text-gray-500">Name</span><br><span class="text-white">Vaibhav Shukla</span></div>
+                <div><span class="text-gray-500">Based in</span><br><span class="text-white">Delhi / Mumbai</span></div>
+                <div><span class="text-gray-500">Website</span><br><a href="http://byvaibhav.com" target="_blank" class="text-accent hover:underline">byvaibhav.com</a></div>
+              </div>
+              <div class="space-y-3">
+                <div><span class="text-gray-500">Degree</span><br><span class="text-white">B.Tech CSE</span></div>
+                <div><span class="text-gray-500">Freelance</span><br><span class="text-white">Available</span></div>
+                <div><span class="text-gray-500">Email</span><br><a href="mailto:shuklavaibhav336@gmail.com" class="text-accent hover:underline">shuklavaibhav336@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex gap-3">
+              <a href="https://twitter.com/MrVaiBH0" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.instagram.com/mrvaibh0" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors"><i class="bx bxl-instagram"></i></a>
+              <a href="https://github.com/mr-vaibh" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors"><i class="bx bxl-github"></i></a>
+              <a href="https://www.linkedin.com/in/mrvaibh" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESUME ===== -->
+    <section id="resume" class="py-28 bg-dark">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal text-center mb-16">
+          <p class="text-accent text-xs uppercase tracking-widest mb-3">My Resume</p>
+          <h2 class="font-display text-4xl font-bold text-white">Experience & Education</h2>
+          <p class="text-gray-500 mt-3 text-sm">
+            Full PDF — <a href="/resume" target="_blank" class="text-accent hover:underline">open here</a>
+          </p>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 gap-12">
+
+          <!-- Education -->
+          <div>
+            <h3 class="text-accent text-xs uppercase tracking-widest mb-8 flex items-center gap-3">
+              <i class="bx bx-book-open text-base"></i> Education
+            </h3>
+            <div class="border-l border-gray-800 pl-6 space-y-8">
+              <div class="timeline-item relative">
+                <p class="text-xs text-gray-500 mb-1">2022 – Present</p>
+                <h4 class="text-white font-semibold">B.Tech Computer Science & Engineering</h4>
+                <p class="text-gray-500 text-sm">Amity University Haryana</p>
+                <p class="text-gray-600 text-xs mt-1">GPA: 8.59 / 10.0</p>
+              </div>
+              <div class="timeline-item relative">
+                <p class="text-xs text-gray-500 mb-1">2021</p>
+                <h4 class="text-white font-semibold">XII — CBSE Boards</h4>
+                <p class="text-gray-500 text-sm">Paramount International School, Dwarka, ND</p>
+                <p class="text-gray-600 text-xs mt-1">Physics, Chemistry, Maths · 90%</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div>
+            <h3 class="text-accent text-xs uppercase tracking-widest mb-8 flex items-center gap-3">
+              <i class="bx bx-briefcase text-base"></i> Experience
+            </h3>
+            <div class="border-l border-gray-800 pl-6 space-y-8">
+
+              <div class="timeline-item relative">
+                <p class="text-xs text-gray-500 mb-1">Mar 2025 – Present</p>
+                <h4 class="text-white font-semibold">Senior Software Engineer</h4>
+                <p class="text-gray-500 text-sm mb-3">Method Tech</p>
+                <ul class="text-gray-500 text-xs space-y-1.5 list-disc list-inside">
+                  <li>Architected frontend systems rendering 10M+ lines of real-time server data</li>
+                  <li>Built pixel-perfect metadata-driven UI from backend schemas</li>
+                  <li>Developed microservices and REST APIs for financial data pipelines</li>
+                  <li>Set up Docker CI/CD with automated testing and live staging previews</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item relative">
+                <p class="text-xs text-gray-500 mb-1">Jul 2022 – Jan 2024</p>
+                <h4 class="text-white font-semibold">Software Engineer</h4>
+                <p class="text-gray-500 text-sm mb-3">Allorasoft, Dwarka, ND</p>
+                <ul class="text-gray-500 text-xs space-y-1.5 list-disc list-inside">
+                  <li>Built and maintained 3 SPAs in React</li>
+                  <li>Custom JS library improved frontend load time by 28% (Lighthouse)</li>
+                  <li>Automated biometric punch syncing with Django + pyzk CRON scripts</li>
+                  <li>Built REST APIs in Java for attendance and payroll reporting</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POETRIES ===== -->
+    <section id="poetries" class="py-28 bg-surface">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal text-center mb-16">
+          <p class="text-accent text-xs uppercase tracking-widest mb-3">Writings</p>
+          <h2 class="font-display text-4xl font-bold text-white">My Poetries</h2>
+          <p class="text-gray-500 mt-3 text-sm">Trimmed excerpts —
+            <a href="https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28" target="_blank" class="text-accent hover:underline">read full on Notion</a>
+          </p>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="poetry-card bg-card rounded-xl p-6 cursor-pointer" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28','_blank')">
+            <h4 class="text-white font-semibold mb-4 font-display">Just Like that</h4>
+            <p class="text-gray-500 text-sm leading-7 italic">
+              I love you as if my heart has gone wild<br>
+              I love you like my own child,<br>
+              I love you like a soldier coming back to his wife,<br>
+              I love you like that<br>
+              <span class="text-gray-700">···</span><br>
+              I love you with a heartache, cuts deep to core<br>
+              For your voice hard to ignore and eyes I adore
+            </p>
+          </div>
+
+          <div class="poetry-card bg-card rounded-xl p-6 cursor-pointer" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28','_blank')">
+            <h4 class="text-white font-semibold mb-4 font-display">Give me one reason to stop</h4>
+            <p class="text-gray-500 text-sm leading-7 italic">
+              I stand on the edge,<br>
+              The bus is coming fast.<br>
+              I could close my eyes<br>
+              And let it all be past.<br>
+              But give me one reason to stop<br>
+              <span class="text-gray-700">···</span><br>
+              These echoes of grief and haunting lullabies.
+            </p>
+          </div>
+
+          <div class="poetry-card bg-card rounded-xl p-6 cursor-pointer" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28','_blank')">
+            <h4 class="text-white font-semibold mb-4 font-display">Don't teach me to love</h4>
+            <p class="text-gray-500 text-sm leading-7 italic">
+              O, don't teach me to love,<br>
+              For I'm a master of the art of it<br>
+              <span class="text-gray-700">···</span><br>
+              "Does love still resonates after we die?"<br>
+              An oblivious one asks me passing by<br>
+              "No", I said, "hormones die with the body"
+            </p>
+          </div>
+
+          <div class="poetry-card bg-card rounded-xl p-6 cursor-pointer" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28','_blank')">
+            <h4 class="text-white font-semibold mb-4 font-display">Tu pahli to nahi</h4>
+            <p class="text-gray-500 text-sm leading-7 italic">
+              Thokaren pahle bhi khayin hain tu pahli to nahi<br>
+              Jhoothi aas me bita ye pahla saal nahi<br>
+              Uljhi hi jaa rahi hai ye kahani paheli to nahi<br>
+              <span class="text-gray-700">···</span><br>
+              Isi baat pe thi vo maine pahli baat kahi
+            </p>
+          </div>
+
+          <div class="poetry-card bg-card rounded-xl p-6 cursor-pointer" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28','_blank')">
+            <h4 class="text-white font-semibold mb-4 font-display">Bas ki nahi</h4>
+            <p class="text-gray-500 text-sm leading-7 italic">
+              Ye ishq ka maghaz mere bas ki nahi<br>
+              Ye anjam-e-ishq beshumar itni sasti nahi<br>
+              <span class="text-gray-700">···</span><br>
+              Meri o nasamajh muh mod ke tu jachti nahi<br>
+              Teri mafi nahi bas teri khair chahiye
+            </p>
+          </div>
+
+          <div class="poetry-card bg-card rounded-xl p-6 cursor-pointer" onclick="window.open('https://mrvaibh.notion.site/cf993f7899444d6396b47afe3a8f8dde?v=d97dabea342c499f99c167cd42fe6a28','_blank')">
+            <h4 class="text-white font-semibold mb-4 font-display">Mere pas aaoge</h4>
+            <p class="text-gray-500 text-sm leading-7 italic">
+              Jab duniya beswaad lagegi<br>
+              Jab kiye pe pachhtaoge<br>
+              Jab pyaar ki bhookh me, roti bhi na paoge<br>
+              Tab mere pas aaoge<br>
+              <span class="text-gray-700">···</span><br>
+              Khud ke jazeere me khud ko kayd paoge
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section id="work" class="py-28 bg-dark">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal text-center mb-16">
+          <p class="text-accent text-xs uppercase tracking-widest mb-3">Portfolio</p>
+          <h2 class="font-display text-4xl font-bold text-white">My Work</h2>
+          <p class="text-gray-500 mt-3 text-sm">Some of my completed projects</p>
+        </div>
+
+        <div class="reveal grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <a href="https://neutraltip.herokuapp.com" target="_blank" class="work-card bg-card rounded-xl p-6 block group">
+            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <i class="bx bx-lock-alt text-accent text-lg"></i>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Confidant</h4>
+            <p class="text-gray-500 text-sm">Encrypted environment variable SDK</p>
+            <div class="mt-4 flex items-center text-accent text-xs gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span>View project</span><i class="bx bx-arrow-back rotate-180"></i>
+            </div>
+          </a>
+
+          <a href="https://evolves.herokuapp.com" target="_blank" class="work-card bg-card rounded-xl p-6 block group">
+            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <i class="bx bx-line-chart text-accent text-lg"></i>
+            </div>
+            <h4 class="text-white font-semibold mb-2">NSE Pulse</h4>
+            <p class="text-gray-500 text-sm">Record and track historical data of NSE Stock Exchange</p>
+            <div class="mt-4 flex items-center text-accent text-xs gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span>View project</span><i class="bx bx-arrow-back rotate-180"></i>
+            </div>
+          </a>
+
+          <a href="https://longerr.herokuapp.com" target="_blank" class="work-card bg-card rounded-xl p-6 block group">
+            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+              <i class="bx bx-joystick text-accent text-lg"></i>
+            </div>
+            <h4 class="text-white font-semibold mb-2">VisualMotion Simulator</h4>
+            <p class="text-gray-500 text-sm">Game to measure response time of optical patients</p>
+            <div class="mt-4 flex items-center text-accent text-xs gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span>View project</span><i class="bx bx-arrow-back rotate-180"></i>
+            </div>
+          </a>
+
+          <div class="work-card bg-card rounded-xl p-6">
+            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+              <i class="bx bx-news text-accent text-lg"></i>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Nerdsway</h4>
+            <p class="text-gray-500 text-sm">Newsletter website with advanced time-on-page algorithm</p>
+          </div>
+
+          <div class="work-card bg-card rounded-xl p-6">
+            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+              <i class="bx bx-store text-accent text-lg"></i>
+            </div>
+            <h4 class="text-white font-semibold mb-2">Evolves</h4>
+            <p class="text-gray-500 text-sm">E-commerce site with order tracking and Razorpay integration</p>
+          </div>
+
+          <div class="work-card bg-card rounded-xl p-6">
+            <div class="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
+              <i class="bx bx-graduation text-accent text-lg"></i>
+            </div>
+            <h4 class="text-white font-semibold mb-2">CBSE Result Viewer</h4>
+            <p class="text-gray-500 text-sm">Fetch results via CBSE's API by roll number — 2021 project</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-28 bg-surface">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal text-center mb-16">
+          <p class="text-accent text-xs uppercase tracking-widest mb-3">Get in touch</p>
+          <h2 class="font-display text-4xl font-bold text-white">Contact Me</h2>
+          <p class="text-gray-500 mt-3 text-sm">Feel free to reach out anytime</p>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 gap-12">
+
+          <!-- Info -->
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="bx bx-envelope text-accent"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-medium mb-1">Email</h4>
+                <a href="mailto:shuklavaibhav336@gmail.com" class="text-gray-400 hover:text-accent transition-colors text-sm">shuklavaibhav336@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="bx bx-phone text-accent"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-medium mb-1">Phone</h4>
+                <a href="tel:+917457947897" class="text-gray-400 hover:text-accent transition-colors text-sm">+91 745 794 7897</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="bx bx-share-alt text-accent"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-medium mb-2">Social</h4>
+                <div class="flex gap-3">
+                  <a href="https://twitter.com/MrVaiBH0" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors text-sm"><i class="bx bxl-twitter"></i></a>
+                  <a href="https://www.facebook.com/MrVaiBH0" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors text-sm"><i class="bx bxl-facebook"></i></a>
+                  <a href="https://www.instagram.com/mrvaibh0" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors text-sm"><i class="bx bxl-instagram"></i></a>
+                  <a href="https://github.com/mr-vaibh" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors text-sm"><i class="bx bxl-github"></i></a>
+                  <a href="https://www.linkedin.com/in/mrvaibh" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:border-accent hover:text-accent transition-colors text-sm"><i class="bx bxl-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form action="https://formsubmit.co/d2254e92ddd10a1d1ea1ebc872618a62" method="post" class="space-y-4">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Hi, I am MrVaiBH's personal bot :) Thanks for reaching out, he'll reply soon if he gets time.">
+
+            <div class="grid grid-cols-2 gap-4">
+              <input type="text" name="name" placeholder="Your Name" required
+                class="form-input w-full px-4 py-3 rounded-lg text-sm">
+              <input type="email" name="email" placeholder="Your Email" required
+                class="form-input w-full px-4 py-3 rounded-lg text-sm">
+            </div>
+            <input type="text" name="subject" placeholder="Subject" required
+              class="form-input w-full px-4 py-3 rounded-lg text-sm">
+            <textarea name="message" rows="5" placeholder="Your message…" required
+              class="form-input w-full px-4 py-3 rounded-lg text-sm resize-none"></textarea>
+            <button type="submit"
+              class="w-full py-3 bg-accent text-dark font-semibold rounded-lg text-sm hover:bg-yellow-400 transition-colors">
+              Send Message
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-10 bg-dark border-t border-gray-900">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="font-display text-white text-xl mb-2">Vaibhav Shukla</p>
+      <p class="text-gray-600 text-sm mb-6">Thanks for visiting. Reach out anytime.</p>
+      <div class="flex justify-center gap-4 mb-6">
+        <a href="https://twitter.com/MrVaiBH0" target="_blank" class="text-gray-600 hover:text-accent transition-colors"><i class="bx bxl-twitter text-lg"></i></a>
+        <a href="https://www.instagram.com/mrvaibh0" target="_blank" class="text-gray-600 hover:text-accent transition-colors"><i class="bx bxl-instagram text-lg"></i></a>
+        <a href="https://github.com/mr-vaibh" target="_blank" class="text-gray-600 hover:text-accent transition-colors"><i class="bx bxl-github text-lg"></i></a>
+        <a href="https://www.linkedin.com/in/mrvaibh" target="_blank" class="text-gray-600 hover:text-accent transition-colors"><i class="bx bxl-linkedin text-lg"></i></a>
+      </div>
+      <p class="text-gray-700 text-xs">&copy; 2025 Vaibhav Shukla. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#hero" id="back-to-top" class="fixed bottom-6 right-6 w-10 h-10 bg-accent text-dark flex items-center justify-center rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-yellow-400">
+    <i class="bx bx-chevron-up text-xl"></i>
+  </a>
+
+  <script>
+    // ---- Navbar scroll effect ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-dark/95', 'backdrop-blur-md', 'border-b', 'border-gray-900', 'shadow-xl');
+      } else {
+        navbar.classList.remove('bg-dark/95', 'backdrop-blur-md', 'border-b', 'border-gray-900', 'shadow-xl');
+      }
+    });
+
+    // ---- Active nav link on scroll ----
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => observer.observe(s));
+
+    // ---- Mobile menu ----
+    const menuBtn = document.getElementById('menu-btn');
+    const menuClose = document.getElementById('menu-close');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+      mobileNav.classList.remove('opacity-0', 'invisible');
+      mobileNav.classList.add('opacity-100', 'visible');
+    }
+    function closeMenu() {
+      mobileNav.classList.add('opacity-0', 'invisible');
+      mobileNav.classList.remove('opacity-100', 'visible');
+    }
+    menuBtn.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    mobileLinks.forEach(l => l.addEventListener('click', closeMenu));
+
+    // ---- Scroll reveal ----
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ---- Back to top ----
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        btt.classList.remove('opacity-0', 'pointer-events-none');
+        btt.classList.add('opacity-100');
+      } else {
+        btt.classList.add('opacity-0', 'pointer-events-none');
+        btt.classList.remove('opacity-100');
+      }
+    });
+
+    // ---- Hero animations fire on load ----
+    window.addEventListener('load', () => {
+      document.querySelectorAll('[style*="animation-delay"]').forEach(el => {
+        el.style.animationPlayState = 'running';
+      });
+    });
+  </script>
 
 </body>
-
 </html>

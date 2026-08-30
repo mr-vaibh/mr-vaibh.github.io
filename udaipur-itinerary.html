@@ -227,6 +227,22 @@
     .cd-unit{min-width:62px; padding:11px 12px 9px;}
   }
 
+  /* ---------- sound toggle ---------- */
+  .sound-btn{
+    position:absolute; bottom:20px; right:24px; z-index:3;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(243,233,210,0.2);
+    border-radius:50%;
+    width:40px; height:40px;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+    backdrop-filter:blur(6px);
+    transition:background .2s, border-color .2s;
+    color:var(--cream);
+  }
+  .sound-btn:hover{background:rgba(255,255,255,0.18); border-color:rgba(243,233,210,0.4);}
+  .sound-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
   /* ---------- mini ticket stubs (tickets at a glance) ---------- */
   .stub-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   @media (max-width:640px){.stub-grid{grid-template-columns:1fr;}}
@@ -507,9 +523,16 @@
 
 <div class="hero">
   <video class="hero-video" autoplay muted loop playsinline preload="auto">
-    <source src="18983877-uhd_3840_2160_25fps.mp4" type="video/mp4">
+    <source src="udaipur_hero_compressed.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
+  <audio id="heroAudio" loop src="udaipur_hero_compressed.mp4"></audio>
+  <button class="sound-btn" id="soundBtn" title="Toggle sound">
+    <!-- volume-on icon (default) -->
+    <svg id="iconOn" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+    <!-- volume-off icon (hidden) -->
+    <svg id="iconOff" viewBox="0 0 24 24" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+  </button>
   <div class="wrap hero-content">
     <span class="hero-eyebrow">Onward &amp; return · Mewar Express 12963 / 12964</span>
     <h1>Eight tickets,<br>one lake city.<br><span>Udaipur, 9–13 Oct.</span></h1>
@@ -867,6 +890,27 @@
   }
 
   applyState();
+
+  // ---------- sound toggle ----------
+  (function(){
+    const btn    = document.getElementById('soundBtn');
+    const audio  = document.getElementById('heroAudio');
+    const video  = document.querySelector('.hero-video');
+    const iconOn = document.getElementById('iconOn');
+    const iconOff= document.getElementById('iconOff');
+    if(!btn || !audio) return;
+    let on = false;
+    function setOn(state){
+      on = state;
+      iconOn.style.display  = on ? 'block' : 'none';
+      iconOff.style.display = on ? 'none'  : 'block';
+      if(on){ audio.currentTime = video ? video.currentTime : 0; audio.play(); }
+      else  { audio.pause(); }
+    }
+    btn.addEventListener('click', () => setOn(!on));
+    // auto-play audio on first user interaction anywhere on page
+    document.addEventListener('click', function boot(){ setOn(true); document.removeEventListener('click', boot); }, {once:true});
+  })();
 
   // ---------- live departure countdown ----------
   (function(){

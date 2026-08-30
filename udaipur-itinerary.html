@@ -259,6 +259,7 @@
     background:var(--teal);
     color:var(--cream);
   }
+  .stub-head-right{display:flex; align-items:center; gap:10px;}
   .stub-head .badge{
     font-family:'IBM Plex Mono', monospace;
     font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
@@ -268,6 +269,16 @@
   .stub-head .route{
     font-family:'Fraunces', serif; font-weight:600; font-size:15px;
   }
+  .stub-dl{
+    display:flex; align-items:center; justify-content:center;
+    width:30px; height:30px; border-radius:50%;
+    background:rgba(243,233,210,0.12);
+    border:1px solid rgba(243,233,210,0.25);
+    color:var(--cream); flex-shrink:0;
+    transition:background .2s;
+  }
+  .stub-dl:hover{background:rgba(243,233,210,0.25);}
+  .stub-dl svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
   .stub-body{padding:18px 20px 8px;}
   .stub-datetime{
     font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-soft);
@@ -567,7 +578,7 @@
 
     <div class="stub-grid">
       <div class="stub reveal">
-        <div class="stub-head"><span class="route">NZM → UDZ</span><span class="badge">Onward</span></div>
+        <div class="stub-head"><span class="route">NZM → UDZ</span><div class="stub-head-right"><span class="badge">Onward</span><a class="stub-dl" href="udaipur-tickets/NZM-UDZ-1.pdf" download title="Download ticket"><svg viewBox="0 0 24 24"><path d="M12 3v13m0 0-4-4m4 4 4-4M3 21h18"/></svg></a></div></div>
         <div class="stub-body">
           <div class="stub-datetime">9 Oct, 18:25 → 10 Oct, 07:30 · Coach S3 · SL</div>
           <div class="stub-pnr">PNR <b>2958140792</b></div>
@@ -582,7 +593,7 @@
       </div>
 
       <div class="stub reveal">
-        <div class="stub-head"><span class="route">NZM → UDZ</span><span class="badge">Onward</span></div>
+        <div class="stub-head"><span class="route">NZM → UDZ</span><div class="stub-head-right"><span class="badge">Onward</span><a class="stub-dl" href="udaipur-tickets/NZM-UDZ-2.pdf" download title="Download ticket"><svg viewBox="0 0 24 24"><path d="M12 3v13m0 0-4-4m4 4 4-4M3 21h18"/></svg></a></div></div>
         <div class="stub-body">
           <div class="stub-datetime">9 Oct, 18:25 → 10 Oct, 07:30 · Coach S3 · SL</div>
           <div class="stub-pnr">PNR <b>2262081660</b></div>
@@ -597,7 +608,7 @@
       </div>
 
       <div class="stub reveal">
-        <div class="stub-head"><span class="route">UDZ → NZM</span><span class="badge">Return</span></div>
+        <div class="stub-head"><span class="route">UDZ → NZM</span><div class="stub-head-right"><span class="badge">Return</span><a class="stub-dl" href="udaipur-tickets/UDZ-NZM-1.pdf" download title="Download ticket"><svg viewBox="0 0 24 24"><path d="M12 3v13m0 0-4-4m4 4 4-4M3 21h18"/></svg></a></div></div>
         <div class="stub-body">
           <div class="stub-datetime">12 Oct, 18:30 → 13 Oct, 06:50 · Coach S2 · SL</div>
           <div class="stub-pnr">PNR <b>2262082045</b></div>
@@ -612,7 +623,7 @@
       </div>
 
       <div class="stub reveal">
-        <div class="stub-head"><span class="route">UDZ → NZM</span><span class="badge">Return</span></div>
+        <div class="stub-head"><span class="route">UDZ → NZM</span><div class="stub-head-right"><span class="badge">Return</span><a class="stub-dl" href="udaipur-tickets/UDZ-NZM-2.pdf" download title="Download ticket"><svg viewBox="0 0 24 24"><path d="M12 3v13m0 0-4-4m4 4 4-4M3 21h18"/></svg></a></div></div>
         <div class="stub-body">
           <div class="stub-datetime">12 Oct, 18:30 → 13 Oct, 06:50 · Coach S2 · SL</div>
           <div class="stub-pnr">PNR <b>2462082000</b></div>

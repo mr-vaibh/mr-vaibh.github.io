@@ -909,17 +909,26 @@
     const video  = document.querySelector('.hero-video');
     const iconOn = document.getElementById('iconOn');
     const iconOff= document.getElementById('iconOff');
-    if(!btn || !audio) return;
+    if(!btn || !audio || !video) return;
     let on = false;
+
+    function sync(){ audio.currentTime = video.currentTime; }
+
     function setOn(state){
       on = state;
       iconOn.style.display  = on ? 'block' : 'none';
       iconOff.style.display = on ? 'none'  : 'block';
-      if(on){ audio.currentTime = video ? video.currentTime : 0; audio.play(); }
+      if(on){ audio.volume = 0.5; sync(); audio.play(); }
       else  { audio.pause(); }
     }
+
+    // correct drift every timeupdate — if off by >300ms, re-sync
+    video.addEventListener('timeupdate', () => {
+      if(!on) return;
+      if(Math.abs(audio.currentTime - video.currentTime) > 0.3) sync();
+    });
+
     btn.addEventListener('click', () => setOn(!on));
-    // auto-play audio on first user interaction anywhere on page
     document.addEventListener('click', function boot(){ setOn(true); document.removeEventListener('click', boot); }, {once:true});
   })();
 

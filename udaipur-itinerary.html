@@ -917,26 +917,34 @@
     const iconOn = document.getElementById('iconOn');
     const iconOff= document.getElementById('iconOff');
     if(!btn || !audio || !video) return;
+    const STORAGE_KEY = 'udaipur-sound';
     let on = false;
 
     function sync(){ audio.currentTime = video.currentTime; }
 
-    function setOn(state){
+    function setOn(state, save = true){
       on = state;
       iconOn.style.display  = on ? 'block' : 'none';
       iconOff.style.display = on ? 'none'  : 'block';
       if(on){ audio.volume = 0.5; sync(); audio.play(); }
       else  { audio.pause(); }
+      if(save) localStorage.setItem(STORAGE_KEY, on ? 'on' : 'off');
     }
 
-    // correct drift every timeupdate — if off by >300ms, re-sync
     video.addEventListener('timeupdate', () => {
       if(!on) return;
       if(Math.abs(audio.currentTime - video.currentTime) > 0.3) sync();
     });
 
     btn.addEventListener('click', () => setOn(!on));
-    document.addEventListener('click', function boot(){ setOn(true); document.removeEventListener('click', boot); }, {once:true});
+
+    // auto-start on first click only if user hadn't turned it off before
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if(saved !== 'off'){
+      document.addEventListener('click', function boot(){ setOn(true); document.removeEventListener('click', boot); }, {once:true});
+    } else {
+      setOn(false, false); // show muted icon, don't save again
+    }
   })();
 
   // ---------- live departure countdown ----------

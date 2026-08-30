@@ -260,6 +260,33 @@
     color:var(--cream);
   }
   .stub-head-right{display:flex; align-items:center; gap:10px;}
+
+  /* ---------- stay card ---------- */
+  .stay-card{
+    display:grid;
+    grid-template-columns:auto 1px 1fr;
+    gap:0;
+    padding:0;
+    overflow:hidden;
+  }
+  .stay-card-dates{
+    padding:24px 28px;
+    display:flex; flex-direction:column; justify-content:center; gap:18px;
+    min-width:220px;
+  }
+  .stay-card-divider{
+    background:var(--line); width:1px; margin:20px 0;
+  }
+  .stay-card-info{
+    padding:24px 28px;
+    display:flex; flex-direction:column; justify-content:center; gap:10px;
+  }
+  @media(max-width:640px){
+    .stay-card{ grid-template-columns:1fr; }
+    .stay-card-divider{ width:auto; height:1px; margin:0 20px; }
+    .stay-card-dates{ padding:20px 20px 16px; flex-direction:row; flex-wrap:wrap; gap:14px 28px; }
+    .stay-card-info{ padding:16px 20px 20px; }
+  }
   .stub-head .badge{
     font-family:'IBM Plex Mono', monospace;
     font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
@@ -537,7 +564,6 @@
     <source src="udaipur_hero_compressed.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
-  <audio id="heroAudio" loop src="udaipur_hero_compressed.mp4"></audio>
   <button class="sound-btn" id="soundBtn" title="Toggle sound">
     <!-- volume-on icon (default) -->
     <svg id="iconOn" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
@@ -643,22 +669,22 @@
     <span class="section-kicker reveal">Confirmed</span>
     <h2 class="section-title reveal">Our stay</h2>
     <p class="section-sub reveal">Elysium Retreat — The Heritage Haveli, Lal Ghat, Udaipur. Two nights, all eight of us.</p>
-    <div class="card reveal" style="display:grid;grid-template-columns:auto 1px 1fr;gap:0;padding:0;overflow:hidden;">
-      <div style="padding:24px 28px;display:flex;flex-direction:column;justify-content:center;gap:18px;min-width:260px;">
+    <div class="card stay-card reveal">
+      <div class="stay-card-dates">
         <div>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);">Check-in</span>
+          <span class="mono" style="font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);">Check-in</span>
           <div style="font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--teal-deep);margin-top:3px;">Sat, 10 Oct 2026</div>
           <div style="font-size:13.5px;color:var(--ink-soft);">1:00 PM</div>
         </div>
         <div>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);">Check-out</span>
+          <span class="mono" style="font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);">Check-out</span>
           <div style="font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--teal-deep);margin-top:3px;">Mon, 12 Oct 2026</div>
           <div style="font-size:13.5px;color:var(--ink-soft);">11:00 AM</div>
         </div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--pink);letter-spacing:.04em;">2 Nights &nbsp;·&nbsp; 8 Adults</div>
+        <div class="mono" style="font-size:12px;color:var(--pink);letter-spacing:.04em;">2 Nights &nbsp;·&nbsp; 8 Adults</div>
       </div>
-      <div style="background:var(--line);width:1px;margin:20px 0;"></div>
-      <div style="padding:24px 28px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+      <div class="stay-card-divider"></div>
+      <div class="stay-card-info">
         <h3 style="font-size:18px;margin-bottom:4px;">Elysium Retreat — The Heritage Haveli</h3>
         <ul class="stay-list" style="margin:0;">
           <li><b>Lal Ghat</b>, Udaipur — walking distance to City Palace, Ambrai Ghat, and the old city lanes.</li>
@@ -912,38 +938,38 @@
   // ---------- sound toggle ----------
   (function(){
     const btn    = document.getElementById('soundBtn');
-    const audio  = document.getElementById('heroAudio');
     const video  = document.querySelector('.hero-video');
     const iconOn = document.getElementById('iconOn');
     const iconOff= document.getElementById('iconOff');
-    if(!btn || !audio || !video) return;
-    const STORAGE_KEY = 'udaipur-sound';
-    let on = false;
+    if(!btn || !video) return;
+    const KEY = 'udaipur-sound';
 
-    function sync(){ audio.currentTime = video.currentTime; }
+    video.volume = 0.5;
 
-    function setOn(state, save = true){
-      on = state;
+    const saved = localStorage.getItem(KEY);
+    const wantOn = saved !== 'off';
+
+    function updateIcon(on){
       iconOn.style.display  = on ? 'block' : 'none';
       iconOff.style.display = on ? 'none'  : 'block';
-      if(on){ audio.volume = 0.5; sync(); audio.play(); }
-      else  { audio.pause(); }
-      if(save) localStorage.setItem(STORAGE_KEY, on ? 'on' : 'off');
     }
 
-    video.addEventListener('timeupdate', () => {
-      if(!on) return;
-      if(Math.abs(audio.currentTime - video.currentTime) > 0.3) sync();
-    });
+    function setMuted(muted, save = true){
+      video.muted = muted;
+      updateIcon(!muted);
+      if(save) localStorage.setItem(KEY, muted ? 'off' : 'on');
+    }
 
-    btn.addEventListener('click', () => setOn(!on));
+    // show correct icon immediately — don't touch muted yet (video must autoplay muted)
+    updateIcon(wantOn);
 
-    // auto-start on first click only if user hadn't turned it off before
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if(saved !== 'off'){
-      document.addEventListener('click', function boot(){ setOn(true); document.removeEventListener('click', boot); }, {once:true});
-    } else {
-      setOn(false, false); // show muted icon, don't save again
+    btn.addEventListener('click', () => setMuted(!video.muted));
+
+    if(wantOn){
+      document.addEventListener('pointerdown', function boot(e){
+        document.removeEventListener('pointerdown', boot);
+        if(!e.target.closest('#soundBtn')) setMuted(false);
+      });
     }
   })();
 

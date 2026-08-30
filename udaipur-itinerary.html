@@ -165,6 +165,68 @@
     color:rgba(243,233,210,0.6); text-transform:uppercase;
   }
 
+  /* ---------- departure countdown ---------- */
+  .hero-countdown{
+    margin-top:40px;
+    display:inline-flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .cd-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:.13em; text-transform:uppercase;
+    color:rgba(243,233,210,0.45);
+  }
+  .cd-track{
+    display:flex; align-items:flex-start; gap:8px;
+  }
+  .cd-unit{
+    display:flex; flex-direction:column; align-items:center;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(243,233,210,0.12);
+    border-radius:12px;
+    padding:14px 18px 11px;
+    min-width:78px;
+    backdrop-filter:blur(6px);
+  }
+  .cd-num{
+    font-family:'Fraunces', serif;
+    font-size:clamp(30px,4vw,46px);
+    font-weight:600;
+    color:var(--paper);
+    display:block; line-height:1;
+    font-variant-numeric:tabular-nums;
+    transition:transform .14s ease, opacity .14s ease;
+  }
+  .cd-num.tick{transform:translateY(-5px); opacity:0.35;}
+  .cd-lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9.5px; letter-spacing:.1em; text-transform:uppercase;
+    color:rgba(243,233,210,0.4);
+    margin-top:8px; display:block;
+  }
+  .cd-sep{
+    font-family:'Fraunces', serif;
+    font-size:clamp(24px,3vw,36px);
+    color:var(--pink);
+    line-height:1;
+    align-self:center;
+    margin-bottom:28px;
+    opacity:0.75;
+    animation:blink 1s step-start infinite;
+  }
+  @keyframes blink{0%,100%{opacity:.75;} 50%{opacity:.25;}}
+  .cd-done{
+    font-family:'Fraunces', serif;
+    font-size:clamp(22px,3vw,32px);
+    color:var(--pink);
+    margin-top:14px;
+    display:none;
+  }
+  @media (max-width:500px){
+    .cd-unit{min-width:62px; padding:11px 12px 9px;}
+  }
+
   /* ---------- mini ticket stubs (tickets at a glance) ---------- */
   .stub-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
   @media (max-width:640px){.stub-grid{grid-template-columns:1fr;}}
@@ -455,6 +517,20 @@
       <div class="hero-stat"><span class="num">8</span><span class="lbl">Travellers</span></div>
       <div class="hero-stat"><span class="num">3</span><span class="lbl">Days in Udaipur</span></div>
       <div class="hero-stat"><span class="num">2</span><span class="lbl">Nights to book</span></div>
+    </div>
+
+    <div class="hero-countdown">
+      <span class="cd-label">Boarding at NZM &middot; 9 Oct &middot; 18:25 IST</span>
+      <div class="cd-track">
+        <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">Days</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">Hours</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">Mins</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">Secs</span></div>
+      </div>
+      <span class="cd-done" id="cd-done">All aboard. &rarr;</span>
     </div>
   </div>
 </div>
@@ -791,6 +867,40 @@
   }
 
   applyState();
+
+  // ---------- live departure countdown ----------
+  (function(){
+    const departure = new Date('2026-10-09T12:55:00Z'); // 18:25 IST = 12:55 UTC
+    const els = {
+      days:  document.getElementById('cd-days'),
+      hours: document.getElementById('cd-hours'),
+      mins:  document.getElementById('cd-mins'),
+      secs:  document.getElementById('cd-secs'),
+    };
+    const done = document.getElementById('cd-done');
+    function pad(n){ return String(Math.max(0,n)).padStart(2,'0'); }
+    function tick(){
+      const diff = departure - Date.now();
+      if(diff <= 0){
+        Object.values(els).forEach(el => { if(el) el.textContent = '00'; });
+        if(done){ done.style.display = 'block'; }
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000)  / 60000);
+      const s = Math.floor((diff % 60000)    / 1000);
+      const vals = { days: pad(d), hours: pad(h), mins: pad(m), secs: pad(s) };
+      Object.entries(vals).forEach(([k, v]) => {
+        const el = els[k];
+        if(!el || el.textContent === v) return;
+        el.classList.add('tick');
+        setTimeout(() => { el.textContent = v; el.classList.remove('tick'); }, 140);
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 
 </script>
 
